@@ -45,11 +45,13 @@
                 <div>
                     <h3>Firma</h3>
                     <div class="firma">
+                        <p class="p-firma">luis antonio</p>
                     </div>
                 </div>
               <div>
                 <h3>CCV</h3>
                 <div class="ccv">
+                    <p class="p-ccv">1234</p>
                 </div>
               </div>
 
@@ -61,36 +63,52 @@
            </div>
         </div>
 
+
     <section class="card-formulario">
         <div class="card-formulario-container">
            <div class="formulario-title">
-            <h2>Datos Personales</h2>
+              <h2>Datos Personales</h2>
            </div>
-           <form action="post" class="form">
-            <label>Numero Tarjeta</label>
-            <input type="text" placeholder="1001 2002 3003 4004" class="inpunts">
-            <label>Nombre </label>
-            <input type="text" placeholder="Luis Melenciano" class="inpunts">
-            <div class="form-subtitle">
-                <div>
-                    <label>Expira</label>
-                    <input type="text" placeholder="1001 2002" class="sub-inpunts">
-                    <input type="text" placeholder="1001 2002" class="sub-inpunts">
+
+           <form action="" class="fomr-datos" id="form-datos">
+              <div class="bloques">
+                 <label for="numero">Numero Tarjeta</label>
+                 <input type="text" id="inputnumero" maxlength="19" autocomplete="off" placeholder="1001 2002 3003 4004">
+              </div>
+              <div class="bloques">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="inputnombre" maxlength="19" autocomplete="off" placeholder="Luis Melenciano">
+             </div>
+             <div class="bloque-expira-ccv">
+                <label for="lbl-expira" class="lbl-expira" >Expira</label>
+                <div class="expira">
+                    <div>
+                        <select name="selectDia" id="select-dia" class="select">
+                            <option disabled selected>Dia</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="selectmes" id="select-mes" class="select">
+                            <option disabled selected>Mes</option>
+                        </select>
+                    </div>
                 </div>
-                 <div>
-                     <label>CCV</label>
-                     <input type="text" placeholder="1001 2002 3003 4004" class="sub-inpunts">
-                 </div>
-                 
-            </div>
+                <label for="ccv" class="lbl-expira">CCV</label>
+                <div>
+                    <input type="text" id="inputCcv" class="inpuntccv" maxlength="6" autocomplete="off" placeholder="1234">
+                </div>
+             </div>
+
+             <div class="button">
+                <button>enviar</button>
+             </div>
+
+
            </form>
 
         </div>
-     
-
     </section>
     </div>
-
 
     <script src="/javaScript/main.js"></script>
 </body>
