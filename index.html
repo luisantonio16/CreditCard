@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="/Css/styles.css">
     <link rel="shortcut icon" href="/Assets/cardweb.ico" type="image/x-icon">
     <title>Credit Card</title>
 </head>
-<body>
-    
+<body class="body">
+    <div class="hide">
+        <div class="hide-img">
+            <img class="img-hide" src="/Assets/close50px.png" alt="">
+        </div>
+    </div>
+   
     <div class="mainCard">
         <div class="card-container">
            <div class="card-after">
@@ -21,16 +30,16 @@
                     <img src="/Assets/chipcard.png" class="body-img" alt="">
                     <div class="body-titles">
                         <h5>Numero Tarjeta</h5>
-                        <h2 class="card-numero-tarjeta">1001 200 300 400</h2>
+                        <h2 name="inputnumero" class="card-numero-tarjeta">1001 200 300 400</h2>
                     </div>
                     <div class="body-subtitles">
                         <div>
                             <h5>Nombre Tarjeta</h5>
-                            <h3 class="card-nombre-tarjeta">Luis Melenciano</h3>
+                            <p class="card-nombre-tarjeta">Luis Melenciano</p>
                         </div>
                         <div>
-                            <h5>Expiracion</h5>
-                            <h3 class="card-fecha">09/00</h3>
+                            <h5>Exp</h5>
+                            <p class="card-fecha"><span class="mes">MM</span> / <span class="year">AA</span></p>
 
                         </div>
                     </div>
@@ -63,6 +72,9 @@
            </div>
         </div>
 
+       
+        
+
 
     <section class="card-formulario">
         <div class="card-formulario-container">
@@ -70,41 +82,41 @@
               <h2>Datos Personales</h2>
            </div>
 
-           <form action="" class="fomr-datos" id="form-datos">
+           <form class="fomr-datos" id="form-datos">
               <div class="bloques">
                  <label for="numero">Numero Tarjeta</label>
-                 <input type="text" id="inputnumero" maxlength="19" autocomplete="off" placeholder="1001 2002 3003 4004">
+                 <input type="text"  id="inputnumero" maxlength="19" autocomplete="off"  placeholder="1001 2002 3003 4004">
               </div>
               <div class="bloques">
                 <label for="nombre">Nombre</label>
-                <input type="text" id="inputnombre" maxlength="19" autocomplete="off" placeholder="Luis Melenciano">
+                <input type="text" id="inputnombre" maxlength="20" autocomplete="off" placeholder="Luis Melenciano">
              </div>
              <div class="bloque-expira-ccv">
                 <label for="lbl-expira" class="lbl-expira" >Expira</label>
                 <div class="expira">
                     <div>
-                        <select name="selectDia" id="select-dia" class="select">
-                            <option disabled selected>Dia</option>
+                        <select name="selectDia" id="select-mes" class="select">
+                            <option disabled selected>Mes</option>
                         </select>
                     </div>
                     <div>
-                        <select name="selectmes" id="select-mes" class="select">
-                            <option disabled selected>Mes</option>
+                        <select name="selectmes" id="select-año" class="select">
+                            <option disabled selected>Año</option>
                         </select>
                     </div>
                 </div>
                 <label for="ccv" class="lbl-expira">CCV</label>
                 <div>
-                    <input type="text" id="inputCcv" class="inpuntccv" maxlength="6" autocomplete="off" placeholder="1234">
+                    <input type="text" id="inputCcv" class="inpuntccv" maxlength="4" autocomplete="off" placeholder="1234">
                 </div>
              </div>
 
-             <div class="button">
-                <button>enviar</button>
-             </div>
-
+             
 
            </form>
+           <div class="button">
+            <button class="btn-enviar">enviar</button>
+         </div>
 
         </div>
     </section>
